@@ -4,6 +4,10 @@ pub fn for_loop_statement()
     {
         println!("x value is {}", x)
     }
+    for (pos, y) in (30..40).enumerate()
+    {
+        println!("pos {} has value {}", pos, y);
+    }
 }
 
 pub fn while_loop_statement(){
@@ -17,7 +21,16 @@ pub fn while_loop_statement(){
 }
 
 pub fn match_statement(){
-
+    let country_code = 234;
+    let country = match country_code{
+        44 => "United Kingdom",
+        234 => "Nigeria",
+        7 => "Russia",
+        1 => "USA",
+        2..=999 => "Unknown",
+        _ => "Invalid"
+    };
+    println!("the country with code {} is {}", country_code, country)
 }
 
 
