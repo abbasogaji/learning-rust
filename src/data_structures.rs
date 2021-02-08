@@ -51,13 +51,62 @@ pub fn vectors(){
 
 }
 
-fn use_slices(slice : &[usize]){
+fn use_slices(slice : &mut[usize]){
     println!("slice value is {} and length is {}", slice[0], slice.len());
+    slice[1] = 554; 
+}
+
+pub fn strings(){
+
+    //utf-8
+    // string slice
+    // string slice are statically allocated with the program and can be referenced
+    let s : &str = "Hello world";
+    println!("{}",s);
+
+    for c in s.chars()
+    {
+        println!("{}",c);
+    }
+
+    //utf-8
+    //String (Heap memory)
+    let mut st = String::new();
+    st.push_str("Abbas");
+    st.push_str(" Ogaji");
+    println!("{}", st);
+
+    let mut letters = String::new();
+
+    let mut a = 'a' as u8;
+    while a <= ('z' as u8)
+    {
+        println!("{}", a);
+        letters.push(a as char);
+        if a < ('z' as u8){
+            letters.push_str(", ");
+        }
+        a+=1;
+    }
+    println!("{}", letters);
+    
+    //conversion &str <> String
+    let u:&str = &letters;
+    let ustring = u.to_string();
+    println!("conversion works {}", ustring);
+
+    // concatenation
+    // String + &str
+    let mut z = ustring + &u;
+    println!("{}", z);
+    z.remove(0);
+
 }
 
 pub fn slices(){
-        let arrs = [34,45,643,23];
-        use_slices(&arrs[1..3]);
+        let mut arrs = [34,45,643,23];
+        use_slices(&mut arrs[1..3]);
+        println!("a is {:?}", arrs);
 }
 
 pub fn optional_type(){

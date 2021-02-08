@@ -18,7 +18,8 @@ fn main() {
     // data_structures::structures();
     // data_structures::optional_type();
     // data_structures::vectors();
-    data_structures::slices();
+    // data_structures::slices();
+    data_structures::strings();
     // conditionals::while_loop_statement();
     // conditionals::loop_statement();
 }
