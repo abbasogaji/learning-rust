@@ -3,18 +3,24 @@ use std::mem;
 
 mod conditionals;
 mod stack_heap;
+mod data_structures;
 
 const AUTHORS_NAME: &str = "Abbas Ogaji";
 fn main() {
     // Variable Declaration
 
-    operators();
-    variable_decalartion();
-    scopes_and_shadowing();
-    stack_heap::stack_and_heap();
-    conditionals::for_loop_statement();
-    conditionals::while_loop_statement();
-    conditionals::loop_statement();
+    // operators();
+    // variable_decalartion();
+    // scopes_and_shadowing();
+    // stack_heap::stack_and_heap();
+    // conditionals::for_loop_statement();
+    // conditionals::match_statement();
+    // data_structures::structures();
+    // data_structures::optional_type();
+    // data_structures::vectors();
+    data_structures::slices();
+    // conditionals::while_loop_statement();
+    // conditionals::loop_statement();
 }
 
 fn scopes_and_shadowing() {
