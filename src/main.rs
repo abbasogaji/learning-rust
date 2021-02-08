@@ -4,6 +4,7 @@ use std::mem;
 mod conditionals;
 mod stack_heap;
 mod data_structures;
+mod pattern_matching;
 
 const AUTHORS_NAME: &str = "Abbas Ogaji";
 fn main() {
@@ -20,9 +21,10 @@ fn main() {
     // data_structures::vectors();
     // data_structures::slices();
     // data_structures::strings();
-    data_structures::tuple();
+    // data_structures::tuple();
     // conditionals::while_loop_statement();
     // conditionals::loop_statement();
+    pattern_matching::matching();
 }
 
 fn scopes_and_shadowing() {
