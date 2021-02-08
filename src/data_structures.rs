@@ -55,6 +55,12 @@ fn use_slices(slice : &mut[usize]){
     println!("slice value is {} and length is {}", slice[0], slice.len());
     slice[1] = 554; 
 }
+pub fn slices(){
+    let mut arrs = [34,45,643,23];
+    use_slices(&mut arrs[1..3]);
+    println!("a is {:?}", arrs);
+}
+
 
 pub fn strings(){
 
@@ -103,10 +109,21 @@ pub fn strings(){
 
 }
 
-pub fn slices(){
-        let mut arrs = [34,45,643,23];
-        use_slices(&mut arrs[1..3]);
-        println!("a is {:?}", arrs);
+fn sum_and_product(x : i32, y : i32) -> (i32, i32)
+{
+       return (x+y, x*y);
+}
+
+pub fn tuple(){
+    let x = 32;
+    let y = 55;
+    let sp = sum_and_product(x, y);
+    println!("sum and product value is {:?}", sp);
+    println!("{0} + {1} = {2}, {0} x {1} = {3}", x,y, sp.0, sp.1);
+    
+    //destructing 
+    let (a,b) = sp;
+    println!("sum is {}, product is {}", a,b);
 }
 
 pub fn optional_type(){
