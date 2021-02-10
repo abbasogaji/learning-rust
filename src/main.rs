@@ -5,6 +5,7 @@ mod conditionals;
 mod stack_heap;
 mod data_structures;
 mod pattern_matching;
+mod functions;
 
 const AUTHORS_NAME: &str = "Abbas Ogaji";
 fn main() {
@@ -24,7 +25,11 @@ fn main() {
     // data_structures::tuple();
     // conditionals::while_loop_statement();
     // conditionals::loop_statement();
-    pattern_matching::matching();
+    // pattern_matching::matching();
+    // functions::print_value();
+    // functions::get_length_of_line();
+    // functions::closure();
+    functions::traits();
 }
 
 fn scopes_and_shadowing() {
