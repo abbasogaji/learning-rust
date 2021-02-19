@@ -6,6 +6,7 @@ mod stack_heap;
 mod data_structures;
 mod pattern_matching;
 mod functions;
+mod crates;
 
 const AUTHORS_NAME: &str = "Abbas Ogaji";
 fn main() {
@@ -30,6 +31,7 @@ fn main() {
     // functions::get_length_of_line();
     // functions::closure();
     functions::traits();
+    crates::generate_rand_number();
 }
 
 fn scopes_and_shadowing() {
